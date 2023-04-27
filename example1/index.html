@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Model Viewer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-gltf-loader"></script>
+    <script src="./three.min.js"></script>
+    <script src="./GLTFLoader.js"></script>
+
+    <script>
+      const loader = new THREE.GLTFLoader()
+      // loading model
+      loader.load('./model1k.glb', (gltf) => {
+        scene.add(gltf.scene) })
+      </script>
+
+    <!-- <script>
+      // create a scene
+      var scene = new THREE.Scene();
+
+      // create a camera
+      var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+      camera.position.z = 5;
+
+      // create a renderer
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // create a gltf loader
+      var loader = new THREE.GLTFLoader();
+
+      // load the glb model
+      loader.load(
+        './model1k.glb',
+        function (gltf) {
+          // add the model to the scene
+          scene.add(gltf.scene);
+        },
+        undefined,
+        function (error) {
+          console.error(error);
+        }
+      );
+
+      // animate the scene
+      function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+      }
+      animate();
+    </script>
+  </body>
+</html>
+ -->

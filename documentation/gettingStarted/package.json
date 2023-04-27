@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "latest-version": "^7.0.0",
+    "node": "^19.8.1",
+    "three": "^0.151.3"
+  },
+  "devDependencies": {
+    "vite": "^4.3.2"
+  }
+}
